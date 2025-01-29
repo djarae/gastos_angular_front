@@ -1,0 +1,40 @@
+<div class="container justify-content-center">
+    <div class="container col-6 rounded bg-transparent  text-dark " >
+      <table class="table  table-ligth table-striped    justify-content-center " >
+        <thead class="thead-light"> 
+          <!-- <tr>
+            <th>
+              <button onClick={activarFiltros}>Filtrar</button>
+            </th>
+            <th scope="col"> 
+              <input type="text" id="txtFiltroNProducto" name="hookFiltroNProducto" onChange={changeFiltroNProducto} />
+            </th>
+            <th scope="col"> 
+              <input type="text" id="txtFiltroSProducto" name="hookFiltroSProducto" onChange={changeFiltroSProducto} />
+            </th>
+          </tr> -->
+          <tr>
+           <th scope="col">#</th>
+           <th scope="col">Nombre</th>
+           <th scope="col">Monto</th>
+           <th scope="col">Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+         <tr *ngFor="let item of valor">
+             <td> {{ item.id  }}</td> 
+             <td> {{ item.nombre  }}</td> 
+             <td> {{ item.monto  }}</td> 
+             <td> {{ item.estado  }}</td> 
+            </tr> 
+        </tbody> 
+      </table>
+      <!-- <div>
+        <tr>
+          <th><button onClick={paginaMenos} >Izquierda</button></th>
+          <th><p>{Paginacion}</p></th>
+          <th><button  onClick={paginaMas}>Derecha</button></th>
+        </tr>
+      </div> -->
+    </div>
+  </div>
