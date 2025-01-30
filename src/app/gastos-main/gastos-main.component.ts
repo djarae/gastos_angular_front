@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Registro} from '../../models/registro'
 
 @Component({
   selector: 'app-gastos-main',
@@ -6,10 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./gastos-main.component.css']
 })
 export class GastosMainComponent {
-  dataGastos : any;
+  Registros = new Array<Registro>; 
   async ngOnInit() {
     const response = await fetch('http://127.0.0.1:8080/registros/get');
-    this.dataGastos=await response.json();
+    this.Registros=await response.json();
   }
-
 }
